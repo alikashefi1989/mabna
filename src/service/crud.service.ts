@@ -16,7 +16,7 @@ export abstract class CrudService<EntityModel, EntityCreateModel, EntityUpdateMo
         return this.getAxiosInstance.get(`${uri}`);
     }
 
-    get(id: string): Promise<ApiResponseModel<EntityModel>> {
+    get(id: string): Promise<ApiListResponseModel<EntityModel>> {
         return this.getAxiosInstance.get(`${this.crudBaseUrl}/${id}`);
     }
 
